@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-UZ-s0K">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                                     <rect key="frame" x="0.0" y="424" width="398" height="91"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="GbH-Xe-r1J" kind="show" id="RiT-Dt-Rfe"/>
+                                    <segue destination="SJ3-an-Sz2" kind="show" id="7SG-uU-lPg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-kV-bkA">
@@ -78,46 +77,6 @@
             </objects>
             <point key="canvasLocation" x="1842" y="-747"/>
         </scene>
-        <!--All PT Exercises-->
-        <scene sceneID="vXH-FX-eKQ">
-            <objects>
-                <tableViewController id="GbH-Xe-r1J" customClass="AllPtTableViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bz6-ZW-3PP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="W0c-gC-5De" style="IBUITableViewCellStyleDefault" id="GxQ-ni-bx3">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GxQ-ni-bx3" id="zys-oQ-1uY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W0c-gC-5De">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GbH-Xe-r1J" id="FUh-1o-E7J"/>
-                            <outlet property="delegate" destination="GbH-Xe-r1J" id="Dbd-JI-n7W"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="All PT Exercises" id="Q7T-K7-ShJ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VwX-uz-YB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1233" y="-18"/>
-        </scene>
         <!--Add Exercise-->
         <scene sceneID="M8Z-ax-k7U">
             <objects>
@@ -130,10 +89,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwi-6g-ytz">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwi-6g-ytz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="81" width="151" height="123"/>
+                                    <rect key="frame" x="20" y="504" width="360" height="158"/>
                                 </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Number of reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-Eh-FAA">
@@ -141,15 +100,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="192" y="126" width="188" height="30"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Exercise name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-lu-XCd">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="192" y="81" width="188" height="30"/>
+                                    <rect key="frame" x="20" y="160" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VK-qq-jX1">
@@ -157,7 +108,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="256" width="360" height="30"/>
+                                    <rect key="frame" x="20" y="266" width="360" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Tags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-ra-c4x">
@@ -184,48 +135,67 @@
                                     <rect key="frame" x="20" y="460" width="360" height="30"/>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-1" translatesAutoresizingMaskIntoConstraints="NO" id="giX-de-TyB">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="515" width="360" height="220"/>
-                                </variation>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Hold for x Seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prz-UR-9j0">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="192" y="174" width="188" height="30"/>
+                                    <rect key="frame" x="20" y="212" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJZ-CA-f3N">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.25518255139639745" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="684" width="400" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="ghk-Y1-ApB" eventType="touchUpInside" id="rHo-ou-W47"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Exercise name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-lu-XCd">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="105" width="360" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Mwi-6g-ytz"/>
                                 <exclude reference="HGT-Eh-FAA"/>
-                                <exclude reference="wJs-lu-XCd"/>
                                 <exclude reference="5VK-qq-jX1"/>
                                 <exclude reference="6GO-ra-c4x"/>
                                 <exclude reference="2bZ-Fo-iQY"/>
                                 <exclude reference="O8O-ks-srz"/>
-                                <exclude reference="giX-de-TyB"/>
                                 <exclude reference="prz-UR-9j0"/>
+                                <exclude reference="hJZ-CA-f3N"/>
+                                <exclude reference="wJs-lu-XCd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Mwi-6g-ytz"/>
                                 <include reference="HGT-Eh-FAA"/>
-                                <include reference="wJs-lu-XCd"/>
                                 <include reference="5VK-qq-jX1"/>
                                 <include reference="6GO-ra-c4x"/>
                                 <include reference="2bZ-Fo-iQY"/>
                                 <include reference="O8O-ks-srz"/>
-                                <include reference="giX-de-TyB"/>
                                 <include reference="prz-UR-9j0"/>
+                                <include reference="hJZ-CA-f3N"/>
+                                <include reference="wJs-lu-XCd"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4He-SI-DW9" appends="YES" id="w99-xI-R3B"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collections" destination="2bZ-Fo-iQY" id="UZk-0V-pp0"/>
@@ -235,13 +205,101 @@
                         <outlet property="note" destination="5VK-qq-jX1" id="BjC-z5-1sn"/>
                         <outlet property="reference" destination="O8O-ks-srz" id="D8P-dF-GaS"/>
                         <outlet property="rep" destination="HGT-Eh-FAA" id="YK6-t5-gXA"/>
-                        <outlet property="secondImage" destination="giX-de-TyB" id="VTI-Eh-Aph"/>
                         <outlet property="tag" destination="6GO-ra-c4x" id="dfq-rQ-rye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3S5-CH-34S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4He-SI-DW9">
+                    <connections>
+                        <outlet property="delegate" destination="ghk-Y1-ApB" id="9Mw-7d-eZ0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2617.5" y="-18"/>
+        </scene>
+        <!--All PT Exercises-->
+        <scene sceneID="vTH-AC-aWi">
+            <objects>
+                <viewController title="All PT Exercises" id="SJ3-an-Sz2" customClass="AllPtViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMo-Or-PTZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="po2-o9-3fz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PEy-Bf-U4g">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pM9-C0-X4m">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" textLabel="5nh-PE-06G" detailTextLabel="jJC-Qc-yoX" rowHeight="134" style="IBUITableViewCellStyleSubtitle" id="p4w-10-RIw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p4w-10-RIw" id="9rW-VD-4F4">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5nh-PE-06G">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jJC-Qc-yoX">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SJ3-an-Sz2" id="Hfi-G9-i7x"/>
+                                    <outlet property="delegate" destination="SJ3-an-Sz2" id="ys5-o2-kZe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pM9-C0-X4m" secondAttribute="trailing" id="Rwq-Yx-cz1"/>
+                            <constraint firstItem="pM9-C0-X4m" firstAttribute="leading" secondItem="PEy-Bf-U4g" secondAttribute="leading" id="d6j-Hg-MbV"/>
+                            <constraint firstItem="po2-o9-3fz" firstAttribute="top" secondItem="pM9-C0-X4m" secondAttribute="bottom" id="jP4-7z-4Q3"/>
+                            <constraint firstItem="pM9-C0-X4m" firstAttribute="top" secondItem="OMo-Or-PTZ" secondAttribute="bottom" id="kZI-XP-2RL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pM9-C0-X4m"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Rwq-Yx-cz1"/>
+                                <exclude reference="d6j-Hg-MbV"/>
+                                <exclude reference="kZI-XP-2RL"/>
+                                <exclude reference="jP4-7z-4Q3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pM9-C0-X4m"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Rwq-Yx-cz1"/>
+                                <include reference="d6j-Hg-MbV"/>
+                                <include reference="kZI-XP-2RL"/>
+                                <include reference="jP4-7z-4Q3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFm-jw-NBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="-9.75"/>
         </scene>
         <!--Pt Collections-->
         <scene sceneID="yvX-GH-p8j">

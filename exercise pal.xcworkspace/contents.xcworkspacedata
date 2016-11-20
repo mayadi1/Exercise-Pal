@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AllPtViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:exercise pal.xcodeproj">
    </FileRef>
    <FileRef

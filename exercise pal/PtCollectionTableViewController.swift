@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PtCollectionTableViewController: UITableViewController {
 

@@ -8,6 +8,7 @@ target 'exercise pal' do
   # Pods for exercise pal
 pod ‘Firebase/Database’
 pod 'Firebase’
+pod 'Firebase/Storage'	
 
 
 end

@@ -12,10 +12,10 @@
 		849DC9171DE2181B007A180B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849DC9161DE2181B007A180B /* Assets.xcassets */; };
 		849DC91A1DE2181B007A180B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849DC9181DE2181B007A180B /* LaunchScreen.storyboard */; };
 		849DC9241DE21E7F007A180B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9231DE21E7F007A180B /* MainViewController.swift */; };
-		849DC9261DE21FE9007A180B /* AllPtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */; };
 		849DC9281DE22197007A180B /* PtCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */; };
 		849DC92A1DE22567007A180B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9291DE22567007A180B /* AddViewController.swift */; };
 		849DC92C1DE227A7007A180B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849DC92B1DE227A7007A180B /* GoogleService-Info.plist */; };
+		849DC92E1DE22E2B007A180B /* AllPtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC92D1DE22E2B007A180B /* AllPtViewController.swift */; };
 		9CE9CCDB298D088E8B94E9E7 /* Pods_exercise_pal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8554E7FE7899E0996BDB4D42 /* Pods_exercise_pal.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,10 +27,10 @@
 		849DC9191DE2181B007A180B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849DC91B1DE2181B007A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849DC9231DE21E7F007A180B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
-		849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPtTableViewController.swift; sourceTree = "<group>"; };
 		849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PtCollectionTableViewController.swift; sourceTree = "<group>"; };
 		849DC9291DE22567007A180B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		849DC92B1DE227A7007A180B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		849DC92D1DE22E2B007A180B /* AllPtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPtViewController.swift; sourceTree = "<group>"; };
 		8554E7FE7899E0996BDB4D42 /* Pods_exercise_pal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exercise_pal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF4D20086E123556B113C28 /* Pods-exercise pal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exercise pal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal.debug.xcconfig"; sourceTree = "<group>"; };
 		FF8E5953B68583DE1AB112E6 /* Pods-exercise pal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exercise pal.release.xcconfig"; path = "Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			children = (
 				849DC90F1DE2181B007A180B /* AppDelegate.swift */,
 				849DC9231DE21E7F007A180B /* MainViewController.swift */,
-				849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */,
+				849DC92D1DE22E2B007A180B /* AllPtViewController.swift */,
 				849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */,
 				849DC9291DE22567007A180B /* AddViewController.swift */,
 				849DC9131DE2181B007A180B /* Main.storyboard */,
@@ -225,8 +225,8 @@
 			files = (
 				849DC92A1DE22567007A180B /* AddViewController.swift in Sources */,
 				849DC9101DE2181B007A180B /* AppDelegate.swift in Sources */,
-				849DC9261DE21FE9007A180B /* AllPtTableViewController.swift in Sources */,
 				849DC9241DE21E7F007A180B /* MainViewController.swift in Sources */,
+				849DC92E1DE22E2B007A180B /* AllPtViewController.swift in Sources */,
 				849DC9281DE22197007A180B /* PtCollectionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +381,7 @@
 				849DC9201DE2181B007A180B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
