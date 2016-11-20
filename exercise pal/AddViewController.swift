@@ -10,17 +10,22 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var rep: UITextField!
+    @IBOutlet weak var hold: UITextField!
+    @IBOutlet weak var note: UITextField!
+    @IBOutlet weak var tag: UITextField!
+    @IBOutlet weak var collections: UITextField!
+    @IBOutlet weak var reference: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {

@@ -15,6 +15,8 @@
 		849DC9261DE21FE9007A180B /* AllPtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */; };
 		849DC9281DE22197007A180B /* PtCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */; };
 		849DC92A1DE22567007A180B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9291DE22567007A180B /* AddViewController.swift */; };
+		849DC92C1DE227A7007A180B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849DC92B1DE227A7007A180B /* GoogleService-Info.plist */; };
+		9CE9CCDB298D088E8B94E9E7 /* Pods_exercise_pal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8554E7FE7899E0996BDB4D42 /* Pods_exercise_pal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPtTableViewController.swift; sourceTree = "<group>"; };
 		849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PtCollectionTableViewController.swift; sourceTree = "<group>"; };
 		849DC9291DE22567007A180B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		849DC92B1DE227A7007A180B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8554E7FE7899E0996BDB4D42 /* Pods_exercise_pal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exercise_pal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF4D20086E123556B113C28 /* Pods-exercise pal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exercise pal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal.debug.xcconfig"; sourceTree = "<group>"; };
+		FF8E5953B68583DE1AB112E6 /* Pods-exercise pal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exercise pal.release.xcconfig"; path = "Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE9CCDB298D088E8B94E9E7 /* Pods_exercise_pal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76BEFB4ED3F6F24443C34A56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8554E7FE7899E0996BDB4D42 /* Pods_exercise_pal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		849DC9031DE2181B007A180B = {
 			isa = PBXGroup;
 			children = (
 				849DC90E1DE2181B007A180B /* exercise pal */,
 				849DC90D1DE2181B007A180B /* Products */,
+				FE4813D93763F90C9CB45CE3 /* Pods */,
+				76BEFB4ED3F6F24443C34A56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +77,27 @@
 		849DC90E1DE2181B007A180B /* exercise pal */ = {
 			isa = PBXGroup;
 			children = (
-				849DC9231DE21E7F007A180B /* MainViewController.swift */,
 				849DC90F1DE2181B007A180B /* AppDelegate.swift */,
-				849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */,
+				849DC9231DE21E7F007A180B /* MainViewController.swift */,
 				849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */,
+				849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */,
 				849DC9291DE22567007A180B /* AddViewController.swift */,
 				849DC9131DE2181B007A180B /* Main.storyboard */,
 				849DC9161DE2181B007A180B /* Assets.xcassets */,
 				849DC9181DE2181B007A180B /* LaunchScreen.storyboard */,
 				849DC91B1DE2181B007A180B /* Info.plist */,
+				849DC92B1DE227A7007A180B /* GoogleService-Info.plist */,
 			);
 			path = "exercise pal";
+			sourceTree = "<group>";
+		};
+		FE4813D93763F90C9CB45CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CF4D20086E123556B113C28 /* Pods-exercise pal.debug.xcconfig */,
+				FF8E5953B68583DE1AB112E6 /* Pods-exercise pal.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849DC91E1DE2181B007A180B /* Build configuration list for PBXNativeTarget "exercise pal" */;
 			buildPhases = (
+				12A872FAD09F9A484FFD49FE /* [CP] Check Pods Manifest.lock */,
 				849DC9081DE2181B007A180B /* Sources */,
 				849DC9091DE2181B007A180B /* Frameworks */,
 				849DC90A1DE2181B007A180B /* Resources */,
+				BA592873A82CAD8FEC2A953F /* [CP] Embed Pods Frameworks */,
+				521002C20F43CDBE8E13A1AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +162,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				849DC91A1DE2181B007A180B /* LaunchScreen.storyboard in Resources */,
+				849DC92C1DE227A7007A180B /* GoogleService-Info.plist in Resources */,
 				849DC9171DE2181B007A180B /* Assets.xcassets in Resources */,
 				849DC9151DE2181B007A180B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12A872FAD09F9A484FFD49FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		521002C20F43CDBE8E13A1AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA592873A82CAD8FEC2A953F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-exercise pal/Pods-exercise pal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		849DC9081DE2181B007A180B /* Sources */ = {
@@ -259,6 +338,7 @@
 		};
 		849DC91F1DE2181B007A180B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF4D20086E123556B113C28 /* Pods-exercise pal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "exercise pal/Info.plist";
@@ -271,6 +351,7 @@
 		};
 		849DC9201DE2181B007A180B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8E5953B68583DE1AB112E6 /* Pods-exercise pal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "exercise pal/Info.plist";

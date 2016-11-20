@@ -87,12 +87,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="GxQ-ni-bx3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="W0c-gC-5De" style="IBUITableViewCellStyleDefault" id="GxQ-ni-bx3">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GxQ-ni-bx3" id="zys-oQ-1uY">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W0c-gC-5De">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -128,7 +139,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Number of reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-Eh-FAA">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="192" y="126" width="188" height="30"/>
                                 </variation>
@@ -216,6 +227,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collections" destination="2bZ-Fo-iQY" id="UZk-0V-pp0"/>
+                        <outlet property="firstImage" destination="Mwi-6g-ytz" id="So1-Xm-7iB"/>
+                        <outlet property="hold" destination="prz-UR-9j0" id="52l-mP-YiM"/>
+                        <outlet property="name" destination="wJs-lu-XCd" id="q7P-4J-iQu"/>
+                        <outlet property="note" destination="5VK-qq-jX1" id="BjC-z5-1sn"/>
+                        <outlet property="reference" destination="O8O-ks-srz" id="D8P-dF-GaS"/>
+                        <outlet property="rep" destination="HGT-Eh-FAA" id="YK6-t5-gXA"/>
+                        <outlet property="secondImage" destination="giX-de-TyB" id="VTI-Eh-Aph"/>
+                        <outlet property="tag" destination="6GO-ra-c4x" id="dfq-rQ-rye"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3S5-CH-34S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,6 @@
+framework module Pods_exercise_pal {
+  umbrella header "Pods-exercise pal-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,6 +9,9 @@
 import UIKit
 
 class AllPtTableViewController: UITableViewController {
+    
+    let exercises = ["Thumb raises", "Arm Curls, 1lb weight", "Index finger lifts", "Leg slides, left and right", "Diaphragm release", "Wrist raises"]
+    let exercisesSubtitle = ["10 reps", "10reps", "20 reps, hold 2 secs", "30 reps", "10 reps", "30 reps"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +28,16 @@ class AllPtTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.exercises.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
+       cell.textLabel?.text = self.exercises[indexPath.row]
+       cell.detailTextLabel?.text = self.exercisesSubtitle[indexPath.row]
+        
 
         return cell
     }
