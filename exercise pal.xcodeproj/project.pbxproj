@@ -13,6 +13,8 @@
 		849DC91A1DE2181B007A180B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849DC9181DE2181B007A180B /* LaunchScreen.storyboard */; };
 		849DC9241DE21E7F007A180B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9231DE21E7F007A180B /* MainViewController.swift */; };
 		849DC9261DE21FE9007A180B /* AllPtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */; };
+		849DC9281DE22197007A180B /* PtCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */; };
+		849DC92A1DE22567007A180B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DC9291DE22567007A180B /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		849DC91B1DE2181B007A180B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849DC9231DE21E7F007A180B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 		849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPtTableViewController.swift; sourceTree = "<group>"; };
+		849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PtCollectionTableViewController.swift; sourceTree = "<group>"; };
+		849DC9291DE22567007A180B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				849DC9231DE21E7F007A180B /* MainViewController.swift */,
 				849DC90F1DE2181B007A180B /* AppDelegate.swift */,
-				849DC9131DE2181B007A180B /* Main.storyboard */,
+				849DC9271DE22197007A180B /* PtCollectionTableViewController.swift */,
 				849DC9251DE21FE9007A180B /* AllPtTableViewController.swift */,
+				849DC9291DE22567007A180B /* AddViewController.swift */,
+				849DC9131DE2181B007A180B /* Main.storyboard */,
 				849DC9161DE2181B007A180B /* Assets.xcassets */,
 				849DC9181DE2181B007A180B /* LaunchScreen.storyboard */,
 				849DC91B1DE2181B007A180B /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849DC92A1DE22567007A180B /* AddViewController.swift in Sources */,
 				849DC9101DE2181B007A180B /* AppDelegate.swift in Sources */,
 				849DC9261DE21FE9007A180B /* AllPtTableViewController.swift in Sources */,
 				849DC9241DE21E7F007A180B /* MainViewController.swift in Sources */,
+				849DC9281DE22197007A180B /* PtCollectionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

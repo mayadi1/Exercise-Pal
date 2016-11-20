@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k2E-Tn-2rj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re2-UZ-s0K">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Exercise Pal-->
         <scene sceneID="ZgR-Xj-5Nf">
             <objects>
                 <viewController id="k2E-Tn-2rj" customClass="MainViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,12 +14,13 @@
                         <viewControllerLayoutGuide type="bottom" id="kdY-hh-Z92"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n44-NE-1dQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-9A-XEl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="416"/>
+                                    <rect key="frame" x="0.0" y="36" width="400" height="380"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-kr-ma8">
@@ -29,7 +30,7 @@
                                     <rect key="frame" x="0.0" y="424" width="398" height="91"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="GbH-Xe-r1J" kind="show" id="7zf-Ry-K07"/>
+                                    <segue destination="GbH-Xe-r1J" kind="show" id="RiT-Dt-Rfe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-kV-bkA">
@@ -38,6 +39,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="523" width="400" height="91"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="UcA-Ar-XFM" kind="show" id="oNo-pI-6i3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDc-GH-zIo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -45,6 +49,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-50" y="627" width="527" height="91"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="ghk-Y1-ApB" kind="show" id="Wun-7T-tGe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,41 +72,207 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Exercise Pal" id="snO-s2-IZp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wl1-c8-hZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="-747"/>
+            <point key="canvasLocation" x="1842" y="-747"/>
         </scene>
-        <!--All Pt Table View Controller-->
+        <!--All PT Exercises-->
         <scene sceneID="vXH-FX-eKQ">
             <objects>
                 <tableViewController id="GbH-Xe-r1J" customClass="AllPtTableViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bz6-ZW-3PP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GxQ-ni-bx3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="GxQ-ni-bx3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GxQ-ni-bx3" id="zys-oQ-1uY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="GbH-Xe-r1J" id="FUh-1o-E7J"/>
-                            <outlet property="delegate" destination="GbH-Xe-r1J" id="SyA-tE-p5z"/>
+                            <outlet property="delegate" destination="GbH-Xe-r1J" id="Dbd-JI-n7W"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="All PT Exercises" id="Q7T-K7-ShJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwX-uz-YB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="-62.25"/>
+            <point key="canvasLocation" x="1233" y="-18"/>
+        </scene>
+        <!--Add Exercise-->
+        <scene sceneID="M8Z-ax-k7U">
+            <objects>
+                <viewController title="Add Exercise" id="ghk-Y1-ApB" customClass="AddViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wvx-eN-SML"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uz2-FV-bhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="maT-Q3-Wbc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwi-6g-ytz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="81" width="151" height="123"/>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Number of reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-Eh-FAA">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="192" y="126" width="188" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Exercise name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-lu-XCd">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="192" y="81" width="188" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VK-qq-jX1">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="256" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Tags" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-ra-c4x">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="325" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Collections" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bZ-Fo-iQY">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="393" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Reference image" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8O-ks-srz">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="460" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-1" translatesAutoresizingMaskIntoConstraints="NO" id="giX-de-TyB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="515" width="360" height="220"/>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Hold for x Seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prz-UR-9j0">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="192" y="174" width="188" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Mwi-6g-ytz"/>
+                                <exclude reference="HGT-Eh-FAA"/>
+                                <exclude reference="wJs-lu-XCd"/>
+                                <exclude reference="5VK-qq-jX1"/>
+                                <exclude reference="6GO-ra-c4x"/>
+                                <exclude reference="2bZ-Fo-iQY"/>
+                                <exclude reference="O8O-ks-srz"/>
+                                <exclude reference="giX-de-TyB"/>
+                                <exclude reference="prz-UR-9j0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Mwi-6g-ytz"/>
+                                <include reference="HGT-Eh-FAA"/>
+                                <include reference="wJs-lu-XCd"/>
+                                <include reference="5VK-qq-jX1"/>
+                                <include reference="6GO-ra-c4x"/>
+                                <include reference="2bZ-Fo-iQY"/>
+                                <include reference="O8O-ks-srz"/>
+                                <include reference="giX-de-TyB"/>
+                                <include reference="prz-UR-9j0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3S5-CH-34S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617.5" y="-18"/>
+        </scene>
+        <!--Pt Collections-->
+        <scene sceneID="yvX-GH-p8j">
+            <objects>
+                <tableViewController title="Pt Collections" id="UcA-Ar-XFM" customClass="PtCollectionTableViewController" customModule="exercise_pal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gAU-dZ-oVR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zct-md-Uur">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zct-md-Uur" id="9EM-zE-ddW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UcA-Ar-XFM" id="uro-Wb-REJ"/>
+                            <outlet property="delegate" destination="UcA-Ar-XFM" id="AlK-s3-kWo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ido-hN-KEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918.5" y="-18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="thn-cf-fwg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="re2-UZ-s0K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLc-zO-ucL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k2E-Tn-2rj" kind="relationship" relationship="rootViewController" id="KL4-h4-8dZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1I2-Fz-i7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-747"/>
         </scene>
     </scenes>
     <resources>
         <image name="Screen Shot 2016-11-20 at 10.11.24 AM" width="407" height="100"/>
         <image name="Screen Shot 2016-11-20 at 10.11.29 AM" width="403" height="109"/>
         <image name="add" width="517" height="68"/>
+        <image name="add-1" width="290" height="290"/>
         <image name="mainImage" width="503" height="397"/>
     </resources>
 </document>

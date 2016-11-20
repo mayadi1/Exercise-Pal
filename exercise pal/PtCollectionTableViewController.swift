@@ -1,5 +1,5 @@
 //
-//  AllPtTableViewController.swift
+//  PtCollectionTableViewController.swift
 //  exercise pal
 //
 //  Created by admin on 11/20/16.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AllPtTableViewController: UITableViewController {
+class PtCollectionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+  
     }
 
     // MARK: - Table view data source
@@ -36,7 +36,7 @@ class AllPtTableViewController: UITableViewController {
 
         return cell
     }
-    
+
 
     /*
     // Override to support conditional editing of the table view.
