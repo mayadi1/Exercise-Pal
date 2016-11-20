@@ -11,30 +11,53 @@ import Firebase
 
 class PtCollectionTableViewController: UITableViewController {
 
+    @IBOutlet var tableview: UITableView!
+    var name = [""]
+    var rap = [""]
+    var image = [""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = FIRDatabase.database().reference()
+        
+        ref.observeEventType(.ChildAdded) { (snapshot, error) -> Void in
+            let data = snapshot.value
+            var myInfo = (data as! NSArray) as Array
+            
+            self.name.append(myInfo[0] as! String)
+            self.rap.append(myInfo[1] as! String)
+            self.image.append(myInfo[2] as! String)
+            self.tableview.reloadData()
+            
+        }
 
   
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.name.count
+        
+        
+        
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = self.name[indexPath.row]
+        cell.detailTextLabel?.text = self.rap[indexPath.row]
+           
+            if let url = NSURL(string:self.image[indexPath.row]) {
+                if let data = NSData(contentsOfURL: url) {
+                    cell.imageView?.image = UIImage(data: data)
+                }        
+            }
+        
         return cell
     }
 
