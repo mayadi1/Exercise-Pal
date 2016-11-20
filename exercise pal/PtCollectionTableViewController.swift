@@ -49,6 +49,7 @@ class PtCollectionTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
+   
         cell.textLabel?.text = self.name[indexPath.row]
         cell.detailTextLabel?.text = self.rap[indexPath.row]
            

@@ -38,9 +38,9 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         let pushedTap2 = UITapGestureRecognizer(target: self, action: Selector("selectPhoto"))
         pushedTap2.numberOfTapsRequired = 1
         
-        //raise the view when view.edit is true
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+//        //raise the view when view.edit is true
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
         
 //                
 //        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow"), name: UIKeyboardWillShowNotification, object: nil)
@@ -101,22 +101,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    //view raise functions
-    func keyboardWillShow(notification: NSNotification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y -= keyboardSize.height
-        }
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-            self.view.frame.origin.y += keyboardSize.height
-        }
-    }
-    //end of the view raise functions
-    
+
     @IBAction func saveButtonPressed(sender: AnyObject) {
         
          let ref = FIRDatabase.database().reference()
